@@ -16,7 +16,7 @@ class BouncingBall {
 		AppWindow window = new AppWindow("Bouncing ball", width, height); // Set up the window
 		Graphics graphics = window.getGraphics(); 											
 
-		Ball ball = new Ball(graphics, bounds, 10);	// Create a ball object												
+		Ball1 ball = new Ball1(graphics, bounds, 10);	// Create a ball object
 		ball.animate();															
 	}
 }
@@ -25,7 +25,7 @@ class BouncingBall {
 /*===========================================================
 	Ball class
 ===========================================================*/
-class Ball{
+class Ball1 {
 	Graphics graphics;	// graphics area to draw the ball in
 	Rectangle bounds;		// area that the ball is allowed to boucne in
 	float xPosition;		// x position on the ball
@@ -37,7 +37,7 @@ class Ball{
 	/*===========================================================
 		Constructor for the ball object
 	===========================================================*/
-	Ball (Graphics graphics, Rectangle bounds, int size) {
+	Ball1(Graphics graphics, Rectangle bounds, int size) {
 		this.graphics = graphics;
 		this.bounds = bounds;
 		this.xPosition = (bounds.x + bounds.width)/2;				// Center of rectangle

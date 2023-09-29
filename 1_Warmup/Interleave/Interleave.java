@@ -39,7 +39,7 @@ class Interleave {
 class P1 extends Thread {
   public void run ()  {
     Random rnd = new Random();
-    //Time.delay(rnd.nextInt(20));
+    Time.delay(rnd.nextInt(20));
     Interleave.c1 = Interleave.c1 * Interleave.c2;
     System.out.println ("P1 finished");
   }
@@ -48,7 +48,7 @@ class P1 extends Thread {
 class P2 extends Thread {
   public void run () {
     Random rnd = new Random();
-    //Time.delay(rnd.nextInt(20));
+    Time.delay(rnd.nextInt(20));
     Interleave.c1 = Interleave.c1 + Interleave.c2;
     System.out.println ("P2 finished");
   }
@@ -57,7 +57,7 @@ class P2 extends Thread {
 
 class Display extends Thread {
   public void run () {
-    //Time.delay(100);
+    Time.delay(100);
     System.out.println ("c1 = " + Interleave.c1 + "    c2 = " + Interleave.c2);
   }
 }

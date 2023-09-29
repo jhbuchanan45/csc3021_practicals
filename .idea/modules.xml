@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/2_MutualExclusion/2_MutualExclusion.iml" filepath="$PROJECT_DIR$/2_MutualExclusion/2_MutualExclusion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3_AtomicMutex/3_AtomicMutex.iml" filepath="$PROJECT_DIR$/3_AtomicMutex/3_AtomicMutex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4_Semaphores/4_Semaphores.iml" filepath="$PROJECT_DIR$/4_Semaphores/4_Semaphores.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5_Monitors/5_Monitors.iml" filepath="$PROJECT_DIR$/5_Monitors/5_Monitors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6_MonitorPerformance/6_MonitorPerformance.iml" filepath="$PROJECT_DIR$/6_MonitorPerformance/6_MonitorPerformance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1_Warmup/Ball/Ball.iml" filepath="$PROJECT_DIR$/1_Warmup/Ball/Ball.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1_Warmup/ConsoleThreads/ConsoleThreads.iml" filepath="$PROJECT_DIR$/1_Warmup/ConsoleThreads/ConsoleThreads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1_Warmup/Interleave/Interleave.iml" filepath="$PROJECT_DIR$/1_Warmup/Interleave/Interleave.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1_Warmup/Race/Race.iml" filepath="$PROJECT_DIR$/1_Warmup/Race/Race.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1_Warmup/Scheduler/Scheduler.iml" filepath="$PROJECT_DIR$/1_Warmup/Scheduler/Scheduler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1_Warmup/Single_Buffer_Examples/Example1/SingleBuffer1.iml" filepath="$PROJECT_DIR$/1_Warmup/Single_Buffer_Examples/Example1/SingleBuffer1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1_Warmup/Single_Buffer_Examples/Example2/SingleBuffer2.iml" filepath="$PROJECT_DIR$/1_Warmup/Single_Buffer_Examples/Example2/SingleBuffer2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/csc3021_practicals_public.iml" filepath="$PROJECT_DIR$/.idea/csc3021_practicals_public.iml" />
+    </modules>
+  </component>
+</project>

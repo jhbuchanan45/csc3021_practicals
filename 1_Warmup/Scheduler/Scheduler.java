@@ -35,6 +35,7 @@ class TestThread extends Thread {
         do {
             System.out.println(id);
             count = count + 1;
+            Thread.yield();
         }  while (count < 10);
     }
 }
