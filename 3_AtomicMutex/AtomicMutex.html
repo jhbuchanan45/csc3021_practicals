@@ -30,7 +30,7 @@
 					<ol>
 						<li><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Java introduced the concurrent library (java.util.concurrent) around 2004. This library introduces, among others, atomic variables that allow multiple loads and stores to a variable to occur atomically. Study the atomics available in Java, in particular the <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/util/concurrent/atomic/AtomicInteger.html">AtomicInteger</a> class.
 </font>
-						<li><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Implement a mutual exclusion algorithm following the test-and-set method described in the notes. Identify the method provided by AtomicInteger that is closest to test-and-set in the notes, and use this method to complete the skeleton program in the directory TestAndSet following the code provided in the notes.</font>
+						<li><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Implement a mutual exclusion algorithm following the test-and-set method described in the notes. Identify the method provided by AtomicInteger that is closest to test-and-set in the notes, and use this method to complete the skeleton program in the directory Impl.TestAndSet following the code provided in the notes.</font>
 						  <ul>
 							<li><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Try your algorithm using more than 2 threads.</font>
 						</ul>
@@ -53,7 +53,7 @@ fetch_and_add(var,value,old)
   old = var;     -- fetch the old value of variable
   var += value;  -- add value to the variable
 </pre><br>
-Implement this algorithm in Java using the appropriate AtomicInteger method. Base your solution on the skeleton program for TestAndSet.</font>
+Implement this algorithm in Java using the appropriate AtomicInteger method. Base your solution on the skeleton program for Impl.TestAndSet.</font>
 						<ul>
 							<li><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Run the program and observe that no two processes may enter the critical section at the same time.</font>
 							<li><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Run the program and observe that the ticket lock is fair. In fact, processes enter the critical section in the order in which the fetch_and_add() operation is scheduled in the pre-protocol.</font>

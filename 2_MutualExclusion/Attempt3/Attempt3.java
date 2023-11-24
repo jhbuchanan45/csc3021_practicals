@@ -55,10 +55,10 @@ class P1 extends Thread {
 
     public void preProtocol() {
        Attempt3.c1 = 0;
-//       Thread.yield();
+       Thread.yield();
        while (Attempt3.c2 != 1) {
-//         System.out.println("1 prep: in preProtocol loop");
-//         Time.delay(rnd.nextInt(120));
+         System.out.println("1 prep: in preProtocol loop");
+         Time.delay(rnd.nextInt(120));
        }
     }
 
@@ -92,10 +92,10 @@ class P2 extends Thread {
 
     public void preProtocol() {
        Attempt3.c2 = 0;
-//       Thread.yield();
+       Thread.yield();
        while (Attempt3.c1 != 1) {
-//         System.out.println("2 prep: In preProtocol loop ");
-//         Time.delay(rnd.nextInt(120));
+         System.out.println("2 prep: In preProtocol loop ");
+         Time.delay(rnd.nextInt(120));
        }
     }
 

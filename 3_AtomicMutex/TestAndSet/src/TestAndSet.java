@@ -21,18 +21,18 @@ class TestAndSetMutex {
     private AtomicInteger c;
 
     TestAndSetMutex() {
-	c = new AtomicInteger( 0 );
+	    this.c = new AtomicInteger(0);
     }
 
     public void pre_protocol() {
-	int local = 1;
-	do {
-	    local = c.getAndSet( local );
-	} while( local != 0 );
+        int local;
+        do {
+            local = c.getAndSet(1);
+        } while (local == 1);
     }
 
     public void post_protocol() {
-	c.getAndSet( 0 );
+        c.set(0);
     }
 }
 
@@ -41,9 +41,12 @@ class TestAndSet {
 	TestAndSetMutex tas_mutex = new TestAndSetMutex();
         Process thread1 = new Process( tas_mutex, 1 );
         Process thread2 = new Process( tas_mutex, 2 );
+        Process thread3 = new Process( tas_mutex, 3 );
+
 
         thread1.start();
         thread2.start();
+        thread3.start();
     }
 }
 
@@ -52,7 +55,7 @@ class Process extends Thread {
     private TestAndSetMutex mux;
     private int id;
 
-    Process( TestAndSetMutex mux_, int id_ ) {
+    Process(TestAndSetMutex mux_, int id_ ) {
 	mux = mux_;
 	id = id_;
     }
@@ -67,30 +70,30 @@ class Process extends Thread {
     }
 
     public void nonCriticalSection() {
-//       System.out.println(id + " nc: Entering nonCritical section");
+       System.out.println(id + " nc: Entering nonCritical section");
        Time.delay(rnd.nextInt(20));
 
-//       System.out.println(id + " nc: Leaving nonCritical section");
+       System.out.println(id + " nc: Leaving nonCritical section");
     }
 
     public void preProtocol() {
-//       System.out.println(id + " prep: Entering preProtocol section");
+       System.out.println(id + " prep: Entering preProtocol section");
 	mux.pre_protocol();
-//	Time.delay(rnd.nextInt(20));
-//       System.out.println(id + " prep: Leaving preProtocol section");
+	Time.delay(rnd.nextInt(20));
+       System.out.println(id + " prep: Leaving preProtocol section");
     }
 
     public void criticalSection() {
-//       System.out.println(id + " cs: Entering critical section");
-//       System.out.println(id + " cs: In critical section");
+       System.out.println(id + " cs: Entering critical section");
+       System.out.println(id + " cs: In critical section");
        Time.delay(rnd.nextInt(20));
-//       System.out.println(id + " cs: Leaving critical section");
+       System.out.println(id + " cs: Leaving critical section");
     }
 
     public void postProtocol() {
        Time.delay(rnd.nextInt(20));
-//       System.out.println(id + " postp: Entering postProtocol section");
+       System.out.println(id + " postp: Entering postProtocol section");
        mux.post_protocol();
-//       System.out.println(id + " postp: Leaving postProtocol section");
+       System.out.println(id + " postp: Leaving postProtocol section");
     }
 }
